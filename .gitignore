@@ -1,0 +1,13 @@
+# Zennox per-project state (created when you run the scripts)
+.zennox/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Build output (attach zennox.skill to a GitHub Release instead of committing it)
+dist/
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

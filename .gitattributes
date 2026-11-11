@@ -1,0 +1,4 @@
+# Keep LF line endings on every OS so scripts, tests and the package build behave the same
+* text=auto eol=lf
+*.skill binary
+*.png binary

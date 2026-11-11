@@ -1,0 +1,21 @@
+{
+  "name": "zennox",
+  "owner": {
+    "name": "ANBARASU A N",
+    "url": "https://github.com/Anbarasu-A-N"
+  },
+  "metadata": {
+    "description": "Zennox: one all-in-one skill for planning, designing, building, securing, testing and shipping cross-platform apps.",
+    "version": "1.0.1"
+  },
+  "plugins": [
+    {
+      "name": "zennox",
+      "source": "./plugins/zennox",
+      "description": "All-in-one cross-platform app lifecycle skill: spec-to-ship workflow, minimal code, codebase graph, project memory, model-cost routing, anti-slop design, Apple HIG, Motion, Three.js, security, Playwright and DevOps.",
+      "version": "1.0.1",
+      "category": "development",
+      "keywords": ["cross-platform", "tauri", "electron", "react-native", "flutter", "pwa", "design-system", "security", "playwright", "devops"]
+    }
+  ]
+}

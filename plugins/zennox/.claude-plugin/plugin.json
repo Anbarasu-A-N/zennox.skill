@@ -1,0 +1,13 @@
+{
+  "name": "zennox",
+  "version": "1.0.1",
+  "description": "All-in-one cross-platform app lifecycle skill: plan, design, build, secure, test, debug, optimize and ship web, mobile and desktop apps.",
+  "author": {
+    "name": "ANBARASU A N",
+    "url": "https://github.com/Anbarasu-A-N"
+  },
+  "homepage": "https://github.com/Anbarasu-A-N/zennox.skill",
+  "repository": "https://github.com/Anbarasu-A-N/zennox.skill",
+  "license": "MIT",
+  "keywords": ["cross-platform", "skills", "design", "security", "testing", "devops"]
+}

@@ -1,0 +1,38 @@
+name: test
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash   # same shell on Windows, macOS and Linux (Git Bash on Windows)
+jobs:
+  scripts:
+    name: scripts (${{ matrix.os }}, py${{ matrix.python }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.10", "3.13"]
+    runs-on: ${{ matrix.os }}
+    env: { PYTHONUTF8: "1" }
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - name: Self-tests (scripts, manifests, package)
+        run: python -m unittest discover -s tests -v
+
+  package:
+    needs: scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - name: Build zennox.skill
+        run: python tools/build_skill.py dist
+      - uses: actions/upload-artifact@v4
+        with: { name: zennox-skill, path: dist/zennox.skill }
